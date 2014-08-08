@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, sans-serif;
+	background-color: red;
+	}
+	
+#tot{
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	position:relative;
+	background-color: #333333;
+	width: 680px;
+	}
+	
+#header {
+		margin: 0 auto;
+		width: 640px;
+		height: 250px;
+		background: url('http://lh4.ggpht.com/-5_zjGHZXgLM/UgysifAiNQI/AAAAAAAAClc/hbtcyBXJ7FA/s1600/1376496196.jpg') no-repeat;
+		background-size: 100% 100%;
+		}
+		
+#continut{
+			background-color: #FDFDFD;
+		  }
+		  
+#continut p {
+			text-align: justify;
+			text-indent: 30px;
+			}
+			
+p::first-letter{color: red;
+				font-size:large;
+				font-family:"arial black",cursive;
+				}
+				
+.titlu_cap {
+			font-family: "Times New Roman", sans-serif;
+			font-size: 50px;
+			color: black;
+			top: 200px;
+			left: 10px;
+			position: relative;
+		}
+		
+#footer {
+		margin: 0 auto;
+		width: 640px;
+		height:50px;
+}
+
+#footer span{ font-family:"lucida grande",sans-serif;
+			color: blue;
+			font-size: large;
+			padding: 10px;
+			position: relative;
+}
+
+#meniu{	margin: 0 20px;
+		height:30px;
+		padding: 7px, 0;
+}
+
+#meniu ul{ height:29px;
+		  margin:0;
+		  padding: 10px;
+}
+
+#meniu ul li{ list-style: none;
+			display:inline;
+}
+
+#meniu  ul li a:link, #meniu ul li a:active, #meniu ul li a:visited{ color:red;
+				  font-weight: bold;
+				  text-decoration: none;
+				  font-family: "lucida grande", sans-serif;
+				  padding: 10px 7px 10px 7px;
+}
+
+#meniu  ul li a:hover{ background-color: blue;
+}
