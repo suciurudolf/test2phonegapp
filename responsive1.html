@@ -7,7 +7,7 @@
 			$("#paragraf").css("color","blue").show(2000);
 		});
 	$("#doi").click(function(){
-		$("#formular").html("<form name='primul formular' align='center' action='#' method='post'> Nume: <input type='text' name='nume' id='automat'> <br> Prenume: <input type='text' name='prenume'> <br> Concluzii: <textarea id='textul' col='5' rows='4'> </textarea><br> <input button value='Inregistrare' type='submit'><input button value='Resetare' type='reset'>").slideDown(3000);
+		$("#formular").show(1000);
 		});
 	$("#trei").click(function(){
 		$("#automat").val('Suciu');
@@ -35,7 +35,9 @@
 	<p id="paragraf"> paragraful care trebuie sa apara intre cele 2 paragrafe</p>
 	<p>al doilea paragraf care este pe pagina. Daca apesi click pe butonul 1 trebuie sa apara un paragraf inaintea acestuia.</p>
 	<br>
-	<div id="formular"></div>
+	<div id="formular">
+		<form name='primul formular' align='center' action='#' method='post'> Nume: <input type='text' name='nume' id='automat'> <br> Prenume: <input type='text' name='prenume'> <br> Concluzii: <textarea id='textul' col='5' rows='4'> </textarea><br> <input button value='Inregistrare' type='submit'><input button value='Resetare' type='reset'>").slideDown(3000);
+	</div>
 	<hr>
 	<div id="aliniere">
 	<button id="unu">buton 1</button>
