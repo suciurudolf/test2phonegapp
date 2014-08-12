@@ -1,0 +1,48 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#unu").click(function(){
+			$("#paragraf").css("color","blue").show(2000);
+		});
+	$("#doi").click(function(){
+		$("#formular").html("<form name='primul formular' align='center' action='#' method='post'> Nume: <input type='text' name='nume' id='automat'> <br> Prenume: <input type='text' name='prenume'> <br> Concluzii: <textarea id='textul' col='5' rows='4'> </textarea><br> <input button value='Inregistrare' type='submit'><input button value='Resetare' type='reset'>").slideDown(3000);
+		});
+	$("#trei").click(function(){
+		$("#automat").val('Suciu');
+		});
+	$("#trei").click(function(){
+		$("#paragraf").append("<br>" + $("#textul").val()+"</b>");
+		});
+	});
+</script>
+<style>
+	#paragraf{
+			display: none;
+		}
+	#formular{ display: none;
+				background-color: green;
+				text-align: justify;
+		}
+	#aliniere{
+				text-align: center;
+		}
+</style>
+</head>
+<body>
+	<p>primul paragraf.Daca dai click pe butonul 1 trebuie sa apara un paragraf dupa acesta<p>
+	<p id="paragraf"> paragraful care trebuie sa apara intre cele 2 paragrafe</p>
+	<p>al doilea paragraf care este pe pagina. Daca apesi click pe butonul 1 trebuie sa apara un paragraf inaintea acestuia.</p>
+	<br>
+	<div id="formular"></div>
+	<hr>
+	<div id="aliniere">
+	<button id="unu">buton 1</button>
+	<button id="doi">buton 2</button>
+	<button id="trei">buton 3</button>
+	</div>
+	<hr>
+	<a href="index.html">Pagina principala</a>
+</body>
+</html>
