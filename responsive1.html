@@ -7,13 +7,19 @@
 			$("#paragraf").css("color","blue").show(2000);
 		});
 	$("#doi").click(function(){
-		$("#formular").html("<form name='primul formular' align='center' action='#' method='post'> Nume: <input type='text' name='nume' id='automat'> <br> Prenume: <input type='text' name='prenume'> <br> Concluzii: <textarea id='textul' col='5' rows='4'> </textarea><br> <input button value='Inregistrare' type='submit'><input button value='Resetare' type='reset'></form>").show(1000);
+		$("#formular").html("<form name='primul formular' align='center' action='#' method='post'> Nume: <input type='text' name='nume' id='automat'> <br> Prenume: <input type='text' name='prenume'> <br> Concluzii: <textarea id='textul' col='5' rows='4'> </textarea><br> <input button value='Inregistrare' type='submit'><input button value='Resetare' type='reset'></form>").slideDown(3000);
 		});
 	$("#trei").click(function(){
-		$("#automat").val('Suciu');
+		$("#automat").val('Introduceti un nume');
+		});
+	$("#patru").click(function(){
+		$("#unu").slideUp(3000);
 		});
 	$("#trei").click(function(){
 		$("#paragraf").append("<br>" + $("#textul").val()+"</b>");
+		});
+	$("apasa").click(function){
+		$("youtube").show(1000);
 		});
 	});
 </script>
@@ -28,6 +34,9 @@
 	#aliniere{
 				text-align: center;
 		}
+	#youtube {
+		display: none;
+	}
 </style>
 </head>
 <body>
@@ -42,7 +51,10 @@
 	<button id="unu">buton 1</button>
 	<button id="doi">buton 2</button>
 	<button id="trei">buton 3</button>
+	<button id="patru">buton 3</button>
 	</div>
+	<p id="apasa">apasa aici ca sa vezi ceva funny</p>
+	<div id="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/VxvDVhjALoU" frameborder="0" allowfullscreen></iframe></div>
 	<hr>
 	<a href="index.html">Pagina principala</a>
 </body>
