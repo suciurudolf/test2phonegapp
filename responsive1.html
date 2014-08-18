@@ -1,60 +1,230 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/cssx" href="cs.css"/>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css"/>
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+
 <script>
-	$(document).ready(function(){
-		$("#unu").click(function(){
-			$("#paragraf").css("color","blue").show(2000);
-		});
-	$("#doi").click(function(){
-		$("#formular").html("<form name='primul formular' align='center' action='#' method='post'> Nume: <input type='text' name='nume' id='automat'> <br> Prenume: <input type='text' name='prenume'> <br> Concluzii: <textarea id='textul' col='5' rows='4'> </textarea><br> <input button value='Inregistrare' type='submit'><input button value='Resetare' type='reset'></form>").slideDown(3000);
-		});
-	$("#trei").click(function(){
-		$("#automat").val('Introduceti un nume');
-		});
-	$("#patru").click(function(){
-		$("#unu").slideUp(3000);
-		});
-	$("#trei").click(function(){
-		$("#paragraf").append("<br>" + $("#textul").val()+"</b>");
-		});
-	$("#apasa").click(function(){
-		$("#youtube").show(1000);
-		});
+	$(document).on("pagecreate", "#paginaunu", function(){
+		$(document).on("", function(){
+			alert("ce faci?");
+			});
 	});
 </script>
-<style>
-	#paragraf{
-			display: none;
-		}
-	#formular{ display: none;
-				background-color: green;
-				width: 65%;
-		}
-	#aliniere{
-				text-align: center;
-		}
-	#youtube{display:none;}
-	
-</style>
 </head>
 <body>
-	<p>primul paragraf.Daca dai click pe butonul 1 trebuie sa apara un paragraf dupa acesta<p>
-	<p id="paragraf"> paragraful care trebuie sa apara intre cele 2 paragrafe</p>
-	<p>al doilea paragraf care este pe pagina. Daca apesi click pe butonul 1 trebuie sa apara un paragraf inaintea acestuia.</p>
+	<div data-role="page" id="paginaunu">
+		<div data-role="panel" id="panou1">
+			<h1>Titlu 1</h1>
+			<h2>Titlu 2</h2>
+			<p>Aici este un paragraf</p>
+			<form>
+		<div class="ul-field-contain">
+			<label for="numele">Numele</label><input type="text" name="numele" id="numele" placeholder="Introduceti nume" data-clear-btn="true">
+			<label for="data">Data nasterii</label><input type="date" name="data" id="data">
+			<textarea name="comentarii" id="bla_bla" rows="5" col="4"></textarea>
+			
+			<legend>Legenda</legend>
+			<label for="f">Feminin</label>
+			<input type="radio" name="sex" id="f" value="feminin">
+			
+			<label for="m">Masculin</label>
+			<input type="radio" name="sex" id="m" value="masculin">
+			
+			<hr><br>
+			<legend>ceva ooptiuni cu checkbox</legend>
+			
+			<fieldset data-role="controlgroup">
+				<label for="qwe">Optiunea 1</label>
+				<input type="checkbox" name="optiuni" id="qwe">
+				<label for="qwe1">Optiunea 2</label>
+				<input type="checkbox" name="optiuni" id="qwe1">
+				<label for="qwe2">Optiunea 3</label>
+				<input type="checkbox" name="optiuni" id="qwe2">
+			</fieldset>
+		</div>
+	</form>
+		</div>
+	
+  <div data-role="header">
+    <h1>Un titlu anume</h1>
+  </div>
+
+  <div data-role="main"  class="ui-content">
+	<p> Aici este ceva</p>
+  
+	<div class="ui-grid-c">
+		<div class="ui-block-a">
+			<p>Coloana 1<p>
+			<p>Aici  sadnasundkas nfjksdnkd naskjhfjkdb hsfjklbjkasjkfhs jkhfjkash jdhasjkdhkas</p>
+		</div>
+		
+		<div class="ui-block-b">
+			<p>Coloana 2</P>
+			<p>Aici sadnasundkas nfjksdnkdnaskjhfjk dbhsfjklbjkasjkfhsdj khfjk ashjdhasjkdhkas</p>
+		</div>
+		
+		<div class="ui-block-c">
+			<p>A treia coloana</p>
+			<div data-role="collapsibleset">
+				<div data-role="collapsible">
+					<h1>Apasa</h1>
+					<p>UN text anume intr-un paragraf</p>
+					<a href="#" class="ui-btn ui-btn-inline">asdsa</a>
+					<div data-role="collapsible">
+						<h1> Titlu la o optiune</h1>
+						<p>Aici ai optiunea</p>
+					</div>
+				</div>
+				
+				<div data-role="collapsible">
+					<h1>Apasa</h1>
+					<p>Tot un text aiurea</p>
+					<a href="#" class="ui-btn ui-btn-inline">asdsa</a>
+					<div data-role="collapsible">
+						<h1> Titlu la o optiune</h1>
+						<p>Ai optiune aici ce vrei tu</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <hr>
+	<table data-role="table" class="ui-responsive"> 
+		<thead>
+			<tr>
+				<th> asdasdas</th>
+				<th> 123231</th>
+				<th>qwe123</th>
+				<th> oijoij </th>
+				<th> asdasdsads</th>
+				</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			
+			<tr>
+				<td>2</td>
+				<td>2</td>
+				<td>2</td>
+				<td>2</td>
+				<td>2</td>
+			</tr>
+			
+			<tr>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+			</tr>
+			
+			<tr>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+			</tr>
+			
+			<tr>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+				<td>3</td>
+			</tr>
+	</tbody>
+  </table>
+  <hr>
+ <a href="#panou1" class="ui-btn ui-btn-inline">Apasa</a>
+ <hr>
+	<ol data-role="listview">
+		<li>Primu</li>
+		<li>Al doilea</li>
+		<li><a href="#">Undeva</a></li>
+		<li><a href="#">altundeva</a></li>
+	</ol>
+	
+<hr><br>
+	<h4>Numere de telefon Gigeleeee</h4>
+	<form>
+		<input id="filtru" data-type="search" placeholder="introduceti numele...">
+	
+	</form>
 	<br>
-	<div id="formular">
-	</div>
-	<hr>
-	<div id="aliniere">
-	<button id="unu">buton 1</button>
-	<button id="doi">buton 2</button>
-	<button id="trei">buton 3</button>
-	<button id="patru">buton 4</button>
-	</div>
-	<p id="apasa">apasa aici ca sa vezi ceva funny</p>
-	<div id="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/VxvDVhjALoU" frameborder="0" allowfullscreen></iframe></div>
-	<hr>
-	<a href="index.html">Pagina principala</a>
+	<ul data-role="listview" data-autodividers="true" data-filter="true" data-input="#filtru">
+		
+		<li data-icon="power"><a href="#"><img src="http://goo.gl/0Awth9">Ana<span class="ui-li-count">111</span></a></li>
+		<li><a href="#">Anisoara</a></li>
+		<li><a href="#">Andrei</a></li>
+		
+		<li><a href="#">Bogdan</a></li>
+		<li data-filtertext="Emil"><a href="#">Boc</a></li>
+		
+		<li><a href="#">Radu</a></li>
+		<li><a href="#">Cristi</a></li>
+	</ul>
+</div>
+
+	<hr><br>
+	<form>
+		<div class="ul-field-contain">
+			<fieldset class="ui-field-contain">
+			<br>
+			<input type="range" name="asd" id=""www" value="3" min="0" max="100" data-show-value="true" data-popup-enabled="true">
+			<input type="checkbox" data-role="flipswitch" data-on-text="bla-bla" data-off-text="adsa">asda
+				<select name="ziua" id="zi" data-native-menu="false" multiple="multiple">
+					<optgroup label="bla bla">
+					<option>Alege</option>
+					<option value="luni">Luni</option>
+					<option value="marti">Marti</option>
+					<option value="miercuri">Miercuri</option>
+					<option value="joi">Joi</option>
+					<option value="vineri">Vineri</option>
+				</select>
+			</fieldset>
+			<label for="numele">Numele</label><input type="text" name="numele" id="numele" placeholder="Introduceti nume" data-clear-btn="true">
+			<label for="data">Data nasterii</label><input type="date" name="data" id="data">
+			<textarea name="comentarii" id="bla_bla" rows="5" col="4"></textarea>
+			
+			<legend>Legenda</legend>
+			<label for="f">Feminin</label>
+			<input type="radio" name="sex" id="f" value="feminin">
+			
+			<label for="m">Masculin</label>
+			<input type="radio" name="sex" id="m" value="masculin">
+			
+			<hr><br>
+			<legend>ceva ooptiuni cu checkbox</legend>
+			
+			<fieldset data-role="controlgroup">
+				<label for="qwe">Optiunea 1</label>
+				<input type="checkbox" name="optiuni" id="qwe">
+				<label for="qwe1">Optiunea 2</label>
+				<input type="checkbox" name="optiuni" id="qwe1">
+				<label for="qwe2">Optiunea 3</label>
+				<input type="checkbox" name="optiuni" id="qwe2">
+			</fieldset>
+		</div>
+	</form>
+
+		<div data-role="footer">
+ 
+				<h1>&copy; 2014</h1>
+		</div>
+	</div> 
+
 </body>
 </html>
